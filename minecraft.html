@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>zyro webpage :)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./imagery/icon.png">
+    <link rel="stylesheet" href="./buttonstyle.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        document.getElementById("image1").style.border = "10px solid lime";
+    </style>
+    <link rel="script" href="./bwstats.js">
+    <script>
+        console.log(( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )); //crappy mobile detector
+        function navImageWidth() {
+            const navImages = document.getElementsByClassName("navimages");
+            const navimagewidth = (window.innerWidth * 0.8 - 40 - 8 * 20)/4 +"px";
+            console.log(window.innerWidth)
+            console.log(navimagewidth)
+            for (let i = 0; i < navImages.length; i++) {
+                navImages[i].style.width = navimagewidth;
+                navImages[i].style.height = navimagewidth;
+            }
+        }
+        const username = urlParams.get("username");
+        if(username) bwStats(username);
+    </script>
+</head>
+
+<body>
+    <div class="canvas">
+    <h1>mein craft</h1>
+    <br><br><br><br><br><br><br>
+    <a href="./"><img id="mainmenu" src="./imagery/28-3-2024.png"></img></a>
+    <nav>
+    <a href="./minecraft.html"><img id="image1" class="navimages" src="./imagery/gallery/image1.png" style="border:5px solid lime"></a>
+    <a href="./coding.html"><img id="image2" class="navimages" src="./imagery/gallery/image2.png"></a>
+    <a href="./anime.html"><img id="image3" class="navimages" src="./imagery/gallery/image3.gif"></a>
+    <a href="./math.html"><img id="image4" class="navimages" src="./imagery/gallery/image4.png"></a>
+    </nav>
+    <div id="articles" style="background:purple">
+        <h1>current goal: 10k finals before 433 stars</h1>
+        ign: ZYROED (new user new me)<br>
+        <h3><a href="https://plancke.io/hypixel/player/stats/ZYROED#BedWars" target="_black">plancke ZYROED</a></h3><br>
+        <h3><a href="https://namemc.com/profile/ZYROED.1" target="_black">zyroping was my old ign</a></h3>
+    </div>
+    <br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    test<br>
+    <a href="leave"><button class="button-1">leave</button></a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            navImageWidth();
+        });
+    </script>
+</body>
+
+</html>

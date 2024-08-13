@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>zyro webpage :)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./imagery/icon.png">
+    <link rel="stylesheet" href="./buttonstyle.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="script" href="./bwstats.js">
+    <script>
+        console.log(( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )); //crappy mobile detector
+        function navImageWidth() {
+            const navImages = document.getElementsByClassName("navimages");
+            const navimagewidth = (window.innerWidth * 0.8 - 40 - 8 * 20)/4 +"px";
+            console.log(window.innerWidth)
+            console.log(navimagewidth)
+            for (let i = 0; i < navImages.length; i++) {
+                navImages[i].style.width = navimagewidth;
+                navImages[i].style.height = navimagewidth;
+            }
+        }
+        var GET = [];
+        document.URL.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){GET[name]=value;});
+    </script>
+</head>
+
+<body>
+    <div class="canvas">
+    <h1>codign</h1>
+    <br><br><br><br><br><br><br>
+    <a href="./"><img id="mainmenu" src="./imagery/28-3-2024.png"></img></a>
+    <nav>
+    <a href="./minecraft.html"><img id="image1" class="navimages" src="./imagery/gallery/image1.png"></a>
+    <a href="./coding.html"><img id="image2" class="navimages" src="./imagery/gallery/image2.png" style="border:5px solid blue"></a>
+    <a href="./anime.html"><img id="image3" class="navimages" src="./imagery/gallery/image3.gif"></a>
+    <a href="./math.html"><img id="image4" class="navimages" src="./imagery/gallery/image4.png"></a>
+    </nav>
+    <div id="articles" style="background:#45b6fe">
+        <h1>my plans for this website</h1>
+        <h4>currently i am working on a stat checker for this website, so stay tuned :), at first i thought it wouldnt be possible but it seems i can actually manage with just php</h4>
+    </div>
+    <div id="articles" style="background:#6ac5fe">
+        <img id="bot039" src="./imagery/039bot.png"><img><h1>programming experiences (few)</h1>
+        <h4>i have honestly never taken programming too serious, i only know a bit more than the average pc user. i once made a discord bot completed with a youtube song queue integration and stats from hypixel but aside from that i havent done anything notable.</h4>
+        <br><br><br><br><br><br><br>(spaceholder for the image)
+    </div>
+    <br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    test<br>
+    <a href="leave"><button class="button-1">leave</button></a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            navImageWidth();
+        });
+    </script>
+</body>
+
+</html>

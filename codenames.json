@@ -1,0 +1,46 @@
+[
+	{
+		"id": 0,
+		"name": "bee",
+		"spyrating": 1,
+		"vocab": "idk",
+		"achievements": "missed oasis with hints desert and water",
+		"pfpid": "790245961544237098/c67f0ecfcd394f3083edcb1d04bc27ed"
+	},
+	{
+		"id:": 1,
+		"name": "dom",
+		"spyrating": 2,
+		"vocab": "high",
+		"pfpid": "1096747848596463716/3eec23721cfdce7171b9690768b62152"
+	},
+	{
+		"id": 2,
+		"name": "greek",
+		"spyrating": 2,
+		"vocab": "high",
+		"pfpid": "423172439950884865/2fc72c7bda0c49498aba2596faad1f54"
+	},
+	{
+		"id": 3,
+		"name": "kas",
+		"spyrating": 3,
+		"vocab": "mid",
+		"pfpid": "538086887257014284/b50443491ffd51dfee0587d6643cdf86"
+	},
+	{
+		"id": 4,
+		"name": "pip",
+		"spyrating": 3,
+		"vocab": "mid",
+		"achievements": "gives 7 word hints almost weekly",
+		"pfpid": "338640091784413184/29233d2fa95f6bda7b3fee2edf397b86"
+	},
+	{
+		"id": 5,
+		"name": "zyro",
+		"spyrating": 1,
+		"vocab": "low",
+		"pfpid": "883369302307258378/c708be522269782a6e4ffd9598192a26"
+	}
+]

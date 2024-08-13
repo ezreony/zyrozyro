@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>zyro webpage :)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./imagery/icon.png">
+    <link rel="stylesheet" href="./buttonstyle.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        document.getElementById("image1").style.border="10px solid lime";
+    </style>
+    <script>
+        console.log(( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )); //crappy mobile detector
+        function navImageWidth() {
+            const navImages = document.getElementsByClassName("navimages");
+            const navimagewidth = (window.innerWidth * 0.8 - 40 - 8 * 20)/4 +"px";
+            console.log(window.innerWidth)
+            console.log(navimagewidth)
+            for (let i = 0; i < navImages.length; i++) {
+                navImages[i].style.width = navimagewidth;
+                navImages[i].style.height = navimagewidth;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="canvas">
+        <h1>hello wordl</h1>
+        <br><br><br><br><br><br><br>
+        <a href="./"><img id="mainmenu" src="./imagery/28-3-2024.png"></img></a>
+        <nav>
+            <a href="./minecraft.html"><img id="image1" class="navimages" src="./imagery/gallery/image1.png"></a>
+            <a href="./coding.html"><img id="image2" class="navimages" src="./imagery/gallery/image2.png"></a>
+            <a href="./anime.html"><img id="image3" class="navimages" src="./imagery/gallery/image3.gif"></a>
+            <a href="./math.html"><img id="image4" class="navimages" src="./imagery/gallery/image4.png"></a>
+        </nav>
+        <br><br>
+        <img height="400px" width="650" src="./imagery/28-3-2024.png">
+        <img height="300px" src="./likeable.jpeg"><br>
+        ^^my personality apparently
+
+
+        <h3>rules since i am autistic</h3>
+        <h5>
+            1regular game rules<br>
+            2hints must be a single word in the language of the game<br>
+            3only spymasters may use google<br>
+            4spymasters may not disclose any information about the cards to their operatives (this includes the definition of the clues)<br>
+        </h5>
+
+
+    <h4>player info</h5>
+    <form action="index.html" method="POST">
+        <select id="CNid" name="CNid">
+            <option name="" id="null"></option>
+        <input type="submit" value="DO NOT CLICK THIS BUTTON FUCKS EVERYTHING UP">
+    </form>
+
+    <div id=CNcanvas>
+    <img style="height:200px; width:200px; border-radius:50px" id="CNpfp"></img>
+    <p id="CNname"></p>
+    <p id="CNspy"></p>
+    <p id="CNvocab"></p>
+    <p id="CNachievements"></p>
+    </div>
+    <p id="CNiD"></p>
+    
+    <br><br><br><br>
+
+    <h2 style="font-weight:normal">cowoncy interest calculator for dom</h2>
+    <h3 style="font-weight:normal">
+        <ul>
+            <li>A = amount of money</li>
+            <li>B = deposited amount of money</li>
+            <li>n = number of weeks</li>
+            <li>c = last week before the weekly interest surpasses 200.000</li>
+        </ul><br>
+        Formulas:<br>
+        A = B * 1.1^n (B * [1.1^n - 1.1^(n-1)] < 200.000)<br>
+        A = B + (n-c) * 200,000 + B * 1.1^c (B * [1.1^n - 1.1^(n-1)] > 200.000)<br><br>
+        Calculator: B=<input id="B" type="number"> n=<input id="n" type="number">
+            <button onclick="calculateA()">Calculate</button>
+            A=<input id="A" type="number" readonly>
+    </h3>
+    
+    <script>
+        function calculateA() {
+        var B = parseFloat(document.getElementById("B").value);
+        var n = parseInt(document.getElementById("n").value);
+        var A = B;
+        var cap = 200000;
+        
+        for (let i = 0; i < n; i++) { 
+            var interest = A * 0.1; if (interest > cap) {
+                interest = cap;
+            }
+            A += interest;
+        }
+        document.getElementById("A").value = A.toFixed(0);
+    }
+    </script>
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    test<br>
+    <a href="leave"><button class="button-1">leave</button></a>
+    </div>
+    <script>
+
+        //codenames
+        fetch("codenames.json").then(results=>results.json()).then(data => {
+            const nameelement = document.getElementById("CNid");
+            //forms
+            for (var i=0; i<data.length; i++){
+                var opt = document.createElement("option");
+                opt.value = i;
+                opt.innerHTML = data[i].name;
+                nameelement.appendChild(opt);
+            };
+        });
+
+        document.getElementById("CNid").onchange = function() {
+            var index = this.selectedIndex;
+            var inputText = this.children[index].value;
+            fetch("codenames.json").then(results=>results.json()).then(data => {
+                document.getElementById("CNname").innerHTML = "name: "+data[inputText].name;
+                document.getElementById("CNspy").innerHTML = "spy rating: "+data[inputText].spyrating;
+                document.getElementById("CNvocab").innerHTML = "vocab: "+data[inputText].vocab;
+                document.getElementById("CNachievements").innerHTML = "achievements: "+data[inputText].achievements;
+                document.getElementById("CNiD").innerHTML = "id: "+inputText;
+                document.getElementById("CNpfp").src = "https://cdn.discordapp.com/avatars/" + data[inputText].pfpid + "?size=1024";
+            });
+
+        }
+        
+
+        document.addEventListener("DOMContentLoaded", function() {
+            navImageWidth();
+        });
+    </script>
+</body>
+
+</html>
