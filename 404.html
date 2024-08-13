@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>404</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        h1 {
+            font-size: 2em;
+            display: bold;
+            text-align: center;
+        }
+
+
+        @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+        .box-3 { 
+            height: 33.33%;
+            width: 100%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #66A182; 
+        }
+
+        .btn {
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
+        width: 250px;
+        cursor: pointer;
+        color: #FFF;
+        transition: all 0.5s;
+        position: relative;
+        }
+        .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(255,255,255,0.1);
+        transition: all 0.3s;
+        }
+        .btn:hover::before {
+        opacity: 0 ;
+        transform: scale(0.5,0.5);
+        }
+        .btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border: 1px solid rgba(255,255,255,0.5);
+        transform: scale(1.2,1.2);
+        }
+        .btn:hover::after {
+        opacity: 1;
+        transform: scale(1,1);
+        }
+
+    </style>
+
+    <script>
+        const imagelist = ["https://media.tenor.com/w0dZ4Eltk7IAAAAM/vuknok.gif", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJcdJLg1xALTfRxPhuSGBZwOcAOLwoH2QGW0qAVDXtgA&s", "https://media.tenor.com/EBWwgM2vCeMAAAAM/wonhophilia-wonho.gif", "https://media.tenor.com/HPWn9-5ViegAAAAM/spelling-mistake-minor-spelling-mistake.gif", "https://media.tenor.com/8mTQj9LH_t4AAAAM/minor-spelling-mistake-major-spelling-mistake.gif" ]
+        function getGif() {
+            let index = Math.floor(Math.random() * imagelist.length);
+            document.getElementById("funimage").src = imagelist[index]
+        }
+    </script>
+
+    
+</head>
+
+<body>
+   <h1>PAGE NOT FOUND</h1>
+   <img height="400px" width="400px" id="funimage"></img><br>
+   <div class="box-3"><div class="btn">
+        <span><a href="http://zyrozyro.freewebhostmost.com/">back to main page</a></span>
+   </div></div>
+   <div class="box-3"><div class="btn">
+        <span><a href="http://zyrozyro.freewebhostmost.com/">back to last page</a></span>
+   </div></div>
+
+   <script>
+       getGif()
+   </script>
+   
+</body>
+
+</html>
